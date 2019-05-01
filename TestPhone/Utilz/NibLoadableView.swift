@@ -20,7 +20,7 @@ extension NibLoadableView where Self: UIView {
     
     static var nib: UINib {
         let bundle = Bundle(for: Self.self)
-        let nib = UINib(nibName: nibName, bundle: bundle)
+        let nib = UINib(nibName: self.nibName, bundle: bundle)
         return nib
     }
 }

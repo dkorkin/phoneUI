@@ -22,6 +22,11 @@
 		ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587272278711400EB9002 /* UINib+Instantiate.swift */; };
 		ACB5872B2278776E00EB9002 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872A2278776E00EB9002 /* Slide.swift */; };
 		ACB5872D2278778200EB9002 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5872C2278778200EB9002 /* Slide.xib */; };
+		ACB587362279E5DE00EB9002 /* SubscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587322279E5DE00EB9002 /* SubscriptionTableViewCell.swift */; };
+		ACB587372279E5DE00EB9002 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587332279E5DE00EB9002 /* SubscriptionView.swift */; };
+		ACB587382279E5DE00EB9002 /* SubscriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB587342279E5DE00EB9002 /* SubscriptionView.xib */; };
+		ACB587392279E5DE00EB9002 /* SubscriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB587352279E5DE00EB9002 /* SubscriptionTableViewCell.xib */; };
+		ACB5873C2279E62A00EB9002 /* SubscriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5873B2279E62A00EB9002 /* SubscriptionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		ACB587272278711400EB9002 /* UINib+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Instantiate.swift"; sourceTree = "<group>"; };
 		ACB5872A2278776E00EB9002 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		ACB5872C2278778200EB9002 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		ACB587322279E5DE00EB9002 /* SubscriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTableViewCell.swift; sourceTree = "<group>"; };
+		ACB587332279E5DE00EB9002 /* SubscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
+		ACB587342279E5DE00EB9002 /* SubscriptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionView.xib; sourceTree = "<group>"; };
+		ACB587352279E5DE00EB9002 /* SubscriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionTableViewCell.xib; sourceTree = "<group>"; };
+		ACB5873B2279E62A00EB9002 /* SubscriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				ACB5871E22786A6F00EB9002 /* Controllers */,
+				ACB5873A2279E5F300EB9002 /* Models */,
 				ACB5871F22786AD100EB9002 /* Categories */,
 				ACB5872022786BD100EB9002 /* Utilz */,
 				ACB586EA227862A600EB9002 /* AppDelegate.swift */,
@@ -146,20 +157,21 @@
 		ACB587182278662200EB9002 /* CountryDetail */ = {
 			isa = PBXGroup;
 			children = (
-				ACB587292278775300EB9002 /* Slide */,
-				ACB58719227866CC00EB9002 /* Scrollable */,
+				ACB587312279E5B000EB9002 /* SubscriptionTableCell */,
+				ACB58719227866CC00EB9002 /* ScrollableTableHeader */,
 				ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */,
 			);
 			path = CountryDetail;
 			sourceTree = "<group>";
 		};
-		ACB58719227866CC00EB9002 /* Scrollable */ = {
+		ACB58719227866CC00EB9002 /* ScrollableTableHeader */ = {
 			isa = PBXGroup;
 			children = (
+				ACB587292278775300EB9002 /* Slide */,
 				ACB5871A2278688400EB9002 /* ScrollableHeaderView.swift */,
 				ACB5871C2278691700EB9002 /* ScrollableHeaderView.xib */,
 			);
-			path = Scrollable;
+			path = ScrollableTableHeader;
 			sourceTree = "<group>";
 		};
 		ACB5871E22786A6F00EB9002 /* Controllers */ = {
@@ -195,6 +207,25 @@
 				ACB5872C2278778200EB9002 /* Slide.xib */,
 			);
 			path = Slide;
+			sourceTree = "<group>";
+		};
+		ACB587312279E5B000EB9002 /* SubscriptionTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				ACB587322279E5DE00EB9002 /* SubscriptionTableViewCell.swift */,
+				ACB587352279E5DE00EB9002 /* SubscriptionTableViewCell.xib */,
+				ACB587332279E5DE00EB9002 /* SubscriptionView.swift */,
+				ACB587342279E5DE00EB9002 /* SubscriptionView.xib */,
+			);
+			path = SubscriptionTableCell;
+			sourceTree = "<group>";
+		};
+		ACB5873A2279E5F300EB9002 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5873B2279E62A00EB9002 /* SubscriptionModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +332,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB587392279E5DE00EB9002 /* SubscriptionTableViewCell.xib in Resources */,
 				ACB5872D2278778200EB9002 /* Slide.xib in Resources */,
+				ACB587382279E5DE00EB9002 /* SubscriptionView.xib in Resources */,
 				ACB5871D2278691700EB9002 /* ScrollableHeaderView.xib in Resources */,
 				ACB586F5227862A800EB9002 /* LaunchScreen.storyboard in Resources */,
 				ACB586F2227862A800EB9002 /* Assets.xcassets in Resources */,
@@ -330,11 +363,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB587362279E5DE00EB9002 /* SubscriptionTableViewCell.swift in Sources */,
 				ACB5872222786C2000EB9002 /* NibLoadableView.swift in Sources */,
 				ACB5871B2278688400EB9002 /* ScrollableHeaderView.swift in Sources */,
+				ACB587372279E5DE00EB9002 /* SubscriptionView.swift in Sources */,
 				ACB586ED227862A600EB9002 /* CountryDetailViewController.swift in Sources */,
 				ACB5872622786D4C00EB9002 /* ReusableView.swift in Sources */,
 				ACB586EB227862A600EB9002 /* AppDelegate.swift in Sources */,
+				ACB5873C2279E62A00EB9002 /* SubscriptionModel.swift in Sources */,
 				ACB5872422786CD300EB9002 /* UITableViewCell+NibLoadable.swift in Sources */,
 				ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */,
 				ACB5872B2278776E00EB9002 /* Slide.swift in Sources */,

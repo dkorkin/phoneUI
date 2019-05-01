@@ -47,7 +47,7 @@ class ScrollableHeaderView: UITableViewHeaderFooterView {
     
     private func createSlides() {
         for _ in 1...5 {
-            let slide: Slide = UINib.instantiate(Slide.self, withNibName: Slide.nibName)
+            let slide: Slide = UINib.instantiate()
             self.slides.append(slide)
         }
     }

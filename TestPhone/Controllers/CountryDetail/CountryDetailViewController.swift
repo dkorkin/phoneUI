@@ -12,7 +12,7 @@ class CountryDetailViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.bounds.size))
         tableView.register(ScrollableHeaderView.self)
-        //TODO: register cells
+        tableView.register(SubscriptionTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self
         return tableView
@@ -33,16 +33,22 @@ class CountryDetailViewController: UIViewController {
 }
 
 extension CountryDetailViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: SubscriptionTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+        cell.subscriptionViews = self.createSubscriptions()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -53,6 +59,32 @@ extension CountryDetailViewController: UITableViewDelegate, UITableViewDataSourc
         let view: ScrollableHeaderView = tableView.dequeueHeaderReusableCell()
         view.delegate = self
         return view
+    }
+}
+
+extension CountryDetailViewController {
+    private func createSubscriptions() -> [SubscriptionView] {
+        let models = self.createModels()
+        let view1: SubscriptionView = UINib.instantiate()
+        view1.model = models[0]
+        let view2: SubscriptionView = UINib.instantiate()
+        view2.model = models[1]
+        let view3: SubscriptionView = UINib.instantiate()
+        view3.model = models[2]
+        return [view1, view2, view3]
+    }
+    
+    private func createModels() -> [SubscriptionModel] {
+        let model1 = SubscriptionModel(count: "3", period: "months", price: "$29.99")
+        let model2 = SubscriptionModel(
+            isMostPopular: true,
+            count: "3-Day",
+            period: "trial",
+            price: "$7.99",
+            additionalPrice: "/wk"
+        )
+        let model3 = SubscriptionModel(count: "12", period: "months", price: "$59.99")
+        return [model1, model2, model3]
     }
 }
 
