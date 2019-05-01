@@ -10,7 +10,7 @@ import UIKit
 
 class CountryDetailViewController: UIViewController {
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.bounds.size))
+        let tableView = UITableView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.bounds.size), style: .grouped)
         tableView.register(ScrollableHeaderView.self)
         tableView.register(SubscriptionTableViewCell.self)
         tableView.delegate = self
@@ -25,10 +25,18 @@ class CountryDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        UIView.animate(withDuration: 0.25) {
+            UIApplication.shared.statusBarColor = .blue
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        UIView.animate(withDuration: 0.25) {
+            UIApplication.shared.statusBarColor = .white
+        }
     }
 }
 
@@ -74,16 +82,16 @@ extension CountryDetailViewController {
         return [view1, view2, view3]
     }
     
-    private func createModels() -> [SubscriptionModel] {
-        let model1 = SubscriptionModel(count: "3", period: "months", price: "$29.99")
-        let model2 = SubscriptionModel(
+    private func createModels() -> [Subscription] {
+        let model1 = Subscription(count: "3", period: "months", price: "$29.99")
+        let model2 = Subscription(
             isMostPopular: true,
             count: "3-Day",
             period: "trial",
             price: "$7.99",
             additionalPrice: "/wk"
         )
-        let model3 = SubscriptionModel(count: "12", period: "months", price: "$59.99")
+        let model3 = Subscription(count: "12", period: "months", price: "$59.99")
         return [model1, model2, model3]
     }
 }

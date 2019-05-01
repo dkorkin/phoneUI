@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SubscriptionModel {
+class Subscription {
     var isMostPopular: Bool
     var count: String
     var period: String

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CountryTableCell" id="iN0-l3-epB" customClass="CountryTableCell" customModule="TestPhone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-la-cof">
+                    <rect key="frame" x="85" y="10" width="290" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="yMU-TY-9Td"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEl-oE-amj">
+                    <rect key="frame" x="80" y="55" width="35" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="Iji-k1-fLL"/>
+                        <constraint firstAttribute="height" constant="10" id="pUx-3O-hbh"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K6e-0k-ZtF">
+                    <rect key="frame" x="25" y="10" width="35" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="ZCO-Ji-x3O"/>
+                        <constraint firstAttribute="width" constant="35" id="yxv-8i-o6Q"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZEl-oE-amj" firstAttribute="top" secondItem="vAi-la-cof" secondAttribute="bottom" constant="25" id="1c7-Fy-yla"/>
+                <constraint firstItem="ZEl-oE-amj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="7He-jv-Bf2"/>
+                <constraint firstItem="vAi-la-cof" firstAttribute="leading" secondItem="K6e-0k-ZtF" secondAttribute="trailing" constant="25" id="Glw-yT-wsl"/>
+                <constraint firstItem="vAi-la-cof" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="QrO-Ud-aiN"/>
+                <constraint firstItem="K6e-0k-ZtF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="R9d-QH-55p"/>
+                <constraint firstItem="K6e-0k-ZtF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="qzk-ZI-KwZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vAi-la-cof" secondAttribute="trailing" id="sCo-do-XVv"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="callsTag" destination="ZEl-oE-amj" id="OS4-2g-gha"/>
+                <outlet property="countryImage" destination="K6e-0k-ZtF" id="iSn-sr-NVC"/>
+                <outlet property="countryLabel" destination="vAi-la-cof" id="CHa-I8-ENK"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="139.880059970015"/>
+        </view>
+    </objects>
+</document>

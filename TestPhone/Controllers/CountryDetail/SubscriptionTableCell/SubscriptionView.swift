@@ -16,7 +16,7 @@ class SubscriptionView: UIView { //TODO: спросить у Димы как н�
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    var model: SubscriptionModel? {
+    var model: Subscription? {
         didSet {
             configureUI()
         }

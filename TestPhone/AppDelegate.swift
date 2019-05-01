@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = CountryDetailViewController()
+        let vc = CountriesListTableViewController()
+        let nc = UINavigationController(rootViewController: vc)
+        window.rootViewController = nc
         self.window = window
         return true
     }
