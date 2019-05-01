@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		ACB586EB227862A600EB9002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586EA227862A600EB9002 /* AppDelegate.swift */; };
-		ACB586ED227862A600EB9002 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586EC227862A600EB9002 /* ViewController.swift */; };
+		ACB586ED227862A600EB9002 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */; };
 		ACB586F0227862A600EB9002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB586EE227862A600EB9002 /* Main.storyboard */; };
 		ACB586F2227862A800EB9002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB586F1227862A800EB9002 /* Assets.xcassets */; };
 		ACB586F5227862A800EB9002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB586F3227862A800EB9002 /* LaunchScreen.storyboard */; };
 		ACB58700227862A900EB9002 /* TestPhoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586FF227862A900EB9002 /* TestPhoneTests.swift */; };
 		ACB5870B227862A900EB9002 /* TestPhoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5870A227862A900EB9002 /* TestPhoneUITests.swift */; };
+		ACB5871B2278688400EB9002 /* ScrollableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5871A2278688400EB9002 /* ScrollableHeaderView.swift */; };
+		ACB5871D2278691700EB9002 /* ScrollableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5871C2278691700EB9002 /* ScrollableHeaderView.xib */; };
+		ACB5872222786C2000EB9002 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872122786C2000EB9002 /* NibLoadableView.swift */; };
+		ACB5872422786CD300EB9002 /* UITableViewCell+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */; };
+		ACB5872622786D4C00EB9002 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872522786D4C00EB9002 /* ReusableView.swift */; };
+		ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587272278711400EB9002 /* UINib+Instantiate.swift */; };
+		ACB5872B2278776E00EB9002 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872A2278776E00EB9002 /* Slide.swift */; };
+		ACB5872D2278778200EB9002 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5872C2278778200EB9002 /* Slide.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		ACB586E7227862A600EB9002 /* TestPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB586EA227862A600EB9002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACB586EC227862A600EB9002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
 		ACB586EF227862A600EB9002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACB586F1227862A800EB9002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACB586F4227862A800EB9002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,14 @@
 		ACB58706227862A900EB9002 /* TestPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB5870A227862A900EB9002 /* TestPhoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPhoneUITests.swift; sourceTree = "<group>"; };
 		ACB5870C227862A900EB9002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACB5871A2278688400EB9002 /* ScrollableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableHeaderView.swift; sourceTree = "<group>"; };
+		ACB5871C2278691700EB9002 /* ScrollableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollableHeaderView.xib; sourceTree = "<group>"; };
+		ACB5872122786C2000EB9002 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+NibLoadable.swift"; sourceTree = "<group>"; };
+		ACB5872522786D4C00EB9002 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		ACB587272278711400EB9002 /* UINib+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Instantiate.swift"; sourceTree = "<group>"; };
+		ACB5872A2278776E00EB9002 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		ACB5872C2278778200EB9002 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +113,10 @@
 		ACB586E9227862A600EB9002 /* TestPhone */ = {
 			isa = PBXGroup;
 			children = (
+				ACB5871E22786A6F00EB9002 /* Controllers */,
+				ACB5871F22786AD100EB9002 /* Categories */,
+				ACB5872022786BD100EB9002 /* Utilz */,
 				ACB586EA227862A600EB9002 /* AppDelegate.swift */,
-				ACB586EC227862A600EB9002 /* ViewController.swift */,
 				ACB586EE227862A600EB9002 /* Main.storyboard */,
 				ACB586F1227862A800EB9002 /* Assets.xcassets */,
 				ACB586F3227862A800EB9002 /* LaunchScreen.storyboard */,
@@ -123,6 +141,60 @@
 				ACB5870C227862A900EB9002 /* Info.plist */,
 			);
 			path = TestPhoneUITests;
+			sourceTree = "<group>";
+		};
+		ACB587182278662200EB9002 /* CountryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ACB587292278775300EB9002 /* Slide */,
+				ACB58719227866CC00EB9002 /* Scrollable */,
+				ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */,
+			);
+			path = CountryDetail;
+			sourceTree = "<group>";
+		};
+		ACB58719227866CC00EB9002 /* Scrollable */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5871A2278688400EB9002 /* ScrollableHeaderView.swift */,
+				ACB5871C2278691700EB9002 /* ScrollableHeaderView.xib */,
+			);
+			path = Scrollable;
+			sourceTree = "<group>";
+		};
+		ACB5871E22786A6F00EB9002 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACB587182278662200EB9002 /* CountryDetail */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ACB5871F22786AD100EB9002 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */,
+				ACB587272278711400EB9002 /* UINib+Instantiate.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		ACB5872022786BD100EB9002 /* Utilz */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5872122786C2000EB9002 /* NibLoadableView.swift */,
+				ACB5872522786D4C00EB9002 /* ReusableView.swift */,
+			);
+			path = Utilz;
+			sourceTree = "<group>";
+		};
+		ACB587292278775300EB9002 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5872A2278776E00EB9002 /* Slide.swift */,
+				ACB5872C2278778200EB9002 /* Slide.xib */,
+			);
+			path = Slide;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +301,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB5872D2278778200EB9002 /* Slide.xib in Resources */,
+				ACB5871D2278691700EB9002 /* ScrollableHeaderView.xib in Resources */,
 				ACB586F5227862A800EB9002 /* LaunchScreen.storyboard in Resources */,
 				ACB586F2227862A800EB9002 /* Assets.xcassets in Resources */,
 				ACB586F0227862A600EB9002 /* Main.storyboard in Resources */,
@@ -256,8 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACB586ED227862A600EB9002 /* ViewController.swift in Sources */,
+				ACB5872222786C2000EB9002 /* NibLoadableView.swift in Sources */,
+				ACB5871B2278688400EB9002 /* ScrollableHeaderView.swift in Sources */,
+				ACB586ED227862A600EB9002 /* CountryDetailViewController.swift in Sources */,
+				ACB5872622786D4C00EB9002 /* ReusableView.swift in Sources */,
 				ACB586EB227862A600EB9002 /* AppDelegate.swift in Sources */,
+				ACB5872422786CD300EB9002 /* UITableViewCell+NibLoadable.swift in Sources */,
+				ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */,
+				ACB5872B2278776E00EB9002 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
