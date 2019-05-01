@@ -78,16 +78,21 @@ class ScrollableHeaderView: UITableViewHeaderFooterView {
 
 extension ScrollableHeaderView: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        self.cancelButton.isHidden = true
+        self.hideWithAnimation(true)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let pageIndex = round(scrollView.contentOffset.x/scrollView.frame.width)
         self.pageControl.currentPage = Int(pageIndex)
-//        self.cancelButton.isHidden = false
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        self.cancelButton.isHidden = false
+        self.hideWithAnimation(false)
+    }
+    
+    private func hideWithAnimation(_ hidden: Bool) {
+        UIView.animate(withDuration: 0.2) {
+            self.cancelButton.isHidden = hidden
+        }
     }
 }
