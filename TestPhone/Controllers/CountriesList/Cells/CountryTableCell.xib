@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="CountryTableCell" id="iN0-l3-epB" customClass="CountryTableCell" customModule="TestPhone" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-la-cof">
@@ -25,13 +25,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEl-oE-amj">
-                    <rect key="frame" x="80" y="55" width="35" height="10"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="35" id="Iji-k1-fLL"/>
-                        <constraint firstAttribute="height" constant="10" id="pUx-3O-hbh"/>
-                    </constraints>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K6e-0k-ZtF">
                     <rect key="frame" x="25" y="10" width="35" height="25"/>
                     <constraints>
@@ -39,14 +32,37 @@
                         <constraint firstAttribute="width" constant="35" id="yxv-8i-o6Q"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0k-1f-iEX">
+                    <rect key="frame" x="85" y="40" width="50" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="VdH-5f-hYk"/>
+                        <constraint firstAttribute="height" constant="15" id="diU-ox-Hh2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5re-2f-M8y">
+                    <rect key="frame" x="145" y="40" width="40" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Njp-m3-R19"/>
+                        <constraint firstAttribute="height" constant="15" id="pFG-1P-wLL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ZEl-oE-amj" firstAttribute="top" secondItem="vAi-la-cof" secondAttribute="bottom" constant="25" id="1c7-Fy-yla"/>
-                <constraint firstItem="ZEl-oE-amj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="7He-jv-Bf2"/>
+                <constraint firstItem="vAi-la-cof" firstAttribute="leading" secondItem="K6e-0k-ZtF" secondAttribute="trailing" constant="25" id="9m3-Yh-jdW"/>
                 <constraint firstItem="vAi-la-cof" firstAttribute="leading" secondItem="K6e-0k-ZtF" secondAttribute="trailing" constant="25" id="Glw-yT-wsl"/>
                 <constraint firstItem="vAi-la-cof" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="QrO-Ud-aiN"/>
                 <constraint firstItem="K6e-0k-ZtF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="R9d-QH-55p"/>
+                <constraint firstItem="5re-2f-M8y" firstAttribute="top" secondItem="vAi-la-cof" secondAttribute="bottom" constant="10" id="VDX-pH-KYc"/>
+                <constraint firstItem="B0k-1f-iEX" firstAttribute="top" secondItem="vAi-la-cof" secondAttribute="bottom" constant="10" id="Y0S-Ng-V3k"/>
+                <constraint firstItem="B0k-1f-iEX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="85" id="erA-HV-xcx"/>
+                <constraint firstItem="5re-2f-M8y" firstAttribute="leading" secondItem="B0k-1f-iEX" secondAttribute="trailing" constant="10" id="oGi-ej-Ysk"/>
                 <constraint firstItem="K6e-0k-ZtF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="qzk-ZI-KwZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vAi-la-cof" secondAttribute="trailing" id="sCo-do-XVv"/>
             </constraints>
@@ -55,11 +71,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="callsTag" destination="ZEl-oE-amj" id="OS4-2g-gha"/>
+                <outlet property="callsLabel" destination="B0k-1f-iEX" id="DGi-la-hLv"/>
                 <outlet property="countryImage" destination="K6e-0k-ZtF" id="iSn-sr-NVC"/>
                 <outlet property="countryLabel" destination="vAi-la-cof" id="CHa-I8-ENK"/>
+                <outlet property="smsLabel" destination="5re-2f-M8y" id="rS9-6y-9gM"/>
             </connections>
-            <point key="canvasLocation" x="138.40000000000001" y="139.880059970015"/>
+            <point key="canvasLocation" x="138.40000000000001" y="127.736131934033"/>
         </view>
     </objects>
 </document>

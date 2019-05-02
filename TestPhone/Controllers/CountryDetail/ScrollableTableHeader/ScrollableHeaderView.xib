@@ -17,11 +17,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csE-D6-ni8">
-                    <rect key="frame" x="305" y="50" width="60" height="30"/>
+                    <rect key="frame" x="305" y="45" width="60" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="uV8-tc-BKR"/>
                     </constraints>
-                    <state key="normal" title=" Cancel"/>
+                    <state key="normal" title="Close">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="cancelButtonTapped:" destination="-2" eventType="touchUpInside" id="cXs-5J-YfR"/>
                     </connections>
@@ -38,11 +40,11 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="csE-D6-ni8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="45" id="FBb-2M-oJZ"/>
                 <constraint firstItem="4Sz-ql-KCJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="JHx-9g-xzt"/>
                 <constraint firstItem="4Sz-ql-KCJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KJT-sa-tI5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="csE-D6-ni8" secondAttribute="trailing" constant="10" id="PXn-Pd-QHo"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="afO-7T-SkI" secondAttribute="bottom" constant="10" id="Zv7-jB-cjy"/>
-                <constraint firstItem="csE-D6-ni8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="ibg-EG-zUa"/>
                 <constraint firstItem="afO-7T-SkI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lYA-Ge-WTa"/>
                 <constraint firstItem="4Sz-ql-KCJ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="mn9-G9-YuG"/>
                 <constraint firstItem="4Sz-ql-KCJ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ujG-iH-kSn"/>

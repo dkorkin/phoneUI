@@ -6,24 +6,20 @@
 //  Copyright © 2019 Dmitriy Korkin. All rights reserved.
 //
 
-import Foundation
+import Marshal
 
-class Subscription {
+class Subscription: Unmarshaling {
     var isMostPopular: Bool
     var count: String
     var period: String
     var price: String
-    var additionalPrice: String
+    var additionalPrice: String?
     
-    init(isMostPopular: Bool = false,
-         count: String,
-         period: String,
-         price: String,
-         additionalPrice: String = "") {
-        self.isMostPopular = isMostPopular
-        self.count = count
-        self.period = period
-        self.price = price
-        self.additionalPrice = additionalPrice
+    required init(object: MarshaledObject) throws {
+        self.isMostPopular = try object.value(for: "most_popular")
+        self.count = try object.value(for: "count")
+        self.period = try object.value(for: "period")
+        self.price = try object.value(for: "price")
+        self.additionalPrice = try? object.value(for: "additional_price")
     }
 }

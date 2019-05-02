@@ -12,9 +12,11 @@ class SubscriptionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var stackView: UIStackView!
     
-    var subscriptionViews: [UIView] = [] {
+    var subscriptionViews: [SubscriptionView] = []
+    
+    var subscriptions: [Subscription]? {
         didSet {
-            self.setupViews()
+            self.configureUI()
         }
     }
     
@@ -28,12 +30,31 @@ class SubscriptionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.createSubscriptionsViews()
+        self.setupViews()
+        self.backgroundColor = Colors.appBlue
     }
     
     private func setupViews() {
-        for view in subscriptionViews {
+        for view in self.subscriptionViews {
+            print(self.stackView.frame)
             view.frame = self.stackView.frame
             self.stackView.addArrangedSubview(view)
+        }
+    }
+    
+    private func createSubscriptionsViews() {
+        for _ in 0...2 {
+            let view: SubscriptionView = UINib.instantiate()
+            self.subscriptionViews.append(view)
+        }
+    }
+    
+    private func configureUI() {
+        guard let subscriptions = self.subscriptions else { return }
+        guard self.subscriptions?.count ?? 0 <= self.subscriptionViews.count else { return }
+        for index in 0...2 {
+            self.subscriptionViews[index].model = subscriptions[index]
         }
     }
 }

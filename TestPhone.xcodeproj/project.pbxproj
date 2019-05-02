@@ -22,8 +22,8 @@
 		ACB5872422786CD300EB9002 /* UITableViewCell+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */; };
 		ACB5872622786D4C00EB9002 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872522786D4C00EB9002 /* ReusableView.swift */; };
 		ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587272278711400EB9002 /* UINib+Instantiate.swift */; };
-		ACB5872B2278776E00EB9002 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872A2278776E00EB9002 /* Slide.swift */; };
-		ACB5872D2278778200EB9002 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5872C2278778200EB9002 /* Slide.xib */; };
+		ACB5872B2278776E00EB9002 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872A2278776E00EB9002 /* SlideView.swift */; };
+		ACB5872D2278778200EB9002 /* SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5872C2278778200EB9002 /* SlideView.xib */; };
 		ACB587362279E5DE00EB9002 /* SubscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587322279E5DE00EB9002 /* SubscriptionTableViewCell.swift */; };
 		ACB587372279E5DE00EB9002 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587332279E5DE00EB9002 /* SubscriptionView.swift */; };
 		ACB587382279E5DE00EB9002 /* SubscriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB587342279E5DE00EB9002 /* SubscriptionView.xib */; };
@@ -37,6 +37,13 @@
 		ACB5874A2279FC4600EB9002 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587492279FC4600EB9002 /* Countries.swift */; };
 		ACB5874C2279FC7500EB9002 /* CountryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5874B2279FC7500EB9002 /* CountryTableCell.xib */; };
 		ACB5874E227A05C800EB9002 /* UIApplication+StatusBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5874D227A05C800EB9002 /* UIApplication+StatusBarColor.swift */; };
+		ACB58756227A0B6900EB9002 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB58755227A0B6900EB9002 /* Gradient.swift */; };
+		ACB58759227AF6C000EB9002 /* TableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB58757227AF6C000EB9002 /* TableFooterView.swift */; };
+		ACB5875A227AF6C000EB9002 /* TableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB58758227AF6C000EB9002 /* TableFooterView.xib */; };
+		ACB5875D227B125E00EB9002 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5875C227B125E00EB9002 /* DataService.swift */; };
+		ACB5875F227B147C00EB9002 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5875E227B147C00EB9002 /* Phone.swift */; };
+		ACB58761227B25C800EB9002 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB58760227B25C800EB9002 /* Colors.swift */; };
+		ACB58763227B483B00EB9002 /* String+Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB58762227B483B00EB9002 /* String+Width.swift */; };
 		FA67AD0F2568854162EEFC40 /* Pods_TestPhoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1334857D99927F384CBBA748 /* Pods_TestPhoneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,8 +91,8 @@
 		ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+NibLoadable.swift"; sourceTree = "<group>"; };
 		ACB5872522786D4C00EB9002 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		ACB587272278711400EB9002 /* UINib+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Instantiate.swift"; sourceTree = "<group>"; };
-		ACB5872A2278776E00EB9002 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
-		ACB5872C2278778200EB9002 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		ACB5872A2278776E00EB9002 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		ACB5872C2278778200EB9002 /* SlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideView.xib; sourceTree = "<group>"; };
 		ACB587322279E5DE00EB9002 /* SubscriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTableViewCell.swift; sourceTree = "<group>"; };
 		ACB587332279E5DE00EB9002 /* SubscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 		ACB587342279E5DE00EB9002 /* SubscriptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionView.xib; sourceTree = "<group>"; };
@@ -99,6 +106,13 @@
 		ACB587492279FC4600EB9002 /* Countries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		ACB5874B2279FC7500EB9002 /* CountryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryTableCell.xib; sourceTree = "<group>"; };
 		ACB5874D227A05C800EB9002 /* UIApplication+StatusBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+StatusBarColor.swift"; sourceTree = "<group>"; };
+		ACB58755227A0B6900EB9002 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		ACB58757227AF6C000EB9002 /* TableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableFooterView.swift; sourceTree = "<group>"; };
+		ACB58758227AF6C000EB9002 /* TableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterView.xib; sourceTree = "<group>"; };
+		ACB5875C227B125E00EB9002 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		ACB5875E227B147C00EB9002 /* Phone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phone.swift; sourceTree = "<group>"; };
+		ACB58760227B25C800EB9002 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		ACB58762227B483B00EB9002 /* String+Width.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Width.swift"; sourceTree = "<group>"; };
 		AE52EB0790C83BC8436A1C0C /* Pods_TestPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E8EABE73E2A812D873D8ED /* Pods-TestPhoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhoneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhoneTests/Pods-TestPhoneTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +183,7 @@
 		ACB586E9227862A600EB9002 /* TestPhone */ = {
 			isa = PBXGroup;
 			children = (
+				ACB5875B227B125000EB9002 /* Core */,
 				ACB5871E22786A6F00EB9002 /* Controllers */,
 				ACB5873A2279E5F300EB9002 /* Models */,
 				ACB5871F22786AD100EB9002 /* Categories */,
@@ -203,6 +218,7 @@
 		ACB587182278662200EB9002 /* CountryDetail */ = {
 			isa = PBXGroup;
 			children = (
+				ACB58750227A08C800EB9002 /* TableFooter */,
 				ACB587312279E5B000EB9002 /* SubscriptionTableCell */,
 				ACB58719227866CC00EB9002 /* ScrollableTableHeader */,
 				ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */,
@@ -236,6 +252,7 @@
 				ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */,
 				ACB587272278711400EB9002 /* UINib+Instantiate.swift */,
 				ACB5874D227A05C800EB9002 /* UIApplication+StatusBarColor.swift */,
+				ACB58762227B483B00EB9002 /* String+Width.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -246,6 +263,8 @@
 				ACB587452279FBB300EB9002 /* CountryData.swift */,
 				ACB5872122786C2000EB9002 /* NibLoadableView.swift */,
 				ACB5872522786D4C00EB9002 /* ReusableView.swift */,
+				ACB58755227A0B6900EB9002 /* Gradient.swift */,
+				ACB58760227B25C800EB9002 /* Colors.swift */,
 			);
 			path = Utilz;
 			sourceTree = "<group>";
@@ -253,8 +272,8 @@
 		ACB587292278775300EB9002 /* Slide */ = {
 			isa = PBXGroup;
 			children = (
-				ACB5872A2278776E00EB9002 /* Slide.swift */,
-				ACB5872C2278778200EB9002 /* Slide.xib */,
+				ACB5872A2278776E00EB9002 /* SlideView.swift */,
+				ACB5872C2278778200EB9002 /* SlideView.xib */,
 			);
 			path = Slide;
 			sourceTree = "<group>";
@@ -276,6 +295,7 @@
 				ACB587492279FC4600EB9002 /* Countries.swift */,
 				ACB587432279FB7B00EB9002 /* Country.swift */,
 				ACB5873B2279E62A00EB9002 /* Subscription.swift */,
+				ACB5875E227B147C00EB9002 /* Phone.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +316,23 @@
 				ACB587412279FAD100EB9002 /* CountryTableCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		ACB58750227A08C800EB9002 /* TableFooter */ = {
+			isa = PBXGroup;
+			children = (
+				ACB58757227AF6C000EB9002 /* TableFooterView.swift */,
+				ACB58758227AF6C000EB9002 /* TableFooterView.xib */,
+			);
+			path = TableFooter;
+			sourceTree = "<group>";
+		};
+		ACB5875B227B125000EB9002 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ACB5875C227B125E00EB9002 /* DataService.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		FABED631CCE273A0DDB303C3 /* Frameworks */ = {
@@ -417,8 +454,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB587392279E5DE00EB9002 /* SubscriptionTableViewCell.xib in Resources */,
+				ACB5875A227AF6C000EB9002 /* TableFooterView.xib in Resources */,
 				ACB5874C2279FC7500EB9002 /* CountryTableCell.xib in Resources */,
-				ACB5872D2278778200EB9002 /* Slide.xib in Resources */,
+				ACB5872D2278778200EB9002 /* SlideView.xib in Resources */,
 				ACB587382279E5DE00EB9002 /* SubscriptionView.xib in Resources */,
 				ACB5871D2278691700EB9002 /* ScrollableHeaderView.xib in Resources */,
 				ACB586F5227862A800EB9002 /* LaunchScreen.storyboard in Resources */,
@@ -530,17 +568,23 @@
 				ACB5872222786C2000EB9002 /* NibLoadableView.swift in Sources */,
 				ACB5871B2278688400EB9002 /* ScrollableHeaderView.swift in Sources */,
 				ACB587372279E5DE00EB9002 /* SubscriptionView.swift in Sources */,
+				ACB58763227B483B00EB9002 /* String+Width.swift in Sources */,
 				ACB5873F2279FA7F00EB9002 /* CountriesTableViewController.swift in Sources */,
 				ACB586ED227862A600EB9002 /* CountryDetailViewController.swift in Sources */,
 				ACB5872622786D4C00EB9002 /* ReusableView.swift in Sources */,
+				ACB5875F227B147C00EB9002 /* Phone.swift in Sources */,
 				ACB586EB227862A600EB9002 /* AppDelegate.swift in Sources */,
 				ACB5873C2279E62A00EB9002 /* Subscription.swift in Sources */,
+				ACB58761227B25C800EB9002 /* Colors.swift in Sources */,
 				ACB5874A2279FC4600EB9002 /* Countries.swift in Sources */,
 				ACB587482279FC2700EB9002 /* Data+Dictionary.swift in Sources */,
+				ACB58756227A0B6900EB9002 /* Gradient.swift in Sources */,
 				ACB5872422786CD300EB9002 /* UITableViewCell+NibLoadable.swift in Sources */,
+				ACB5875D227B125E00EB9002 /* DataService.swift in Sources */,
 				ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */,
 				ACB587422279FAD100EB9002 /* CountryTableCell.swift in Sources */,
-				ACB5872B2278776E00EB9002 /* Slide.swift in Sources */,
+				ACB58759227AF6C000EB9002 /* TableFooterView.swift in Sources */,
+				ACB5872B2278776E00EB9002 /* SlideView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

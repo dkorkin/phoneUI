@@ -8,8 +8,7 @@
 
 import UIKit
 
-class SubscriptionView: UIView { //TODO: спросить у Димы как нормально изменить бордер не вынося констрейнты; zIndex не нашел
-    
+class SubscriptionView: UIView {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var periodLabel: UILabel!
     @IBOutlet weak var mostPopularLabel: UILabel!
@@ -18,7 +17,7 @@ class SubscriptionView: UIView { //TODO: спросить у Димы как н�
     
     var model: Subscription? {
         didSet {
-            configureUI()
+            self.configureUI()
         }
     }
     
@@ -30,18 +29,18 @@ class SubscriptionView: UIView { //TODO: спросить у Димы как н�
         super.init(coder: aDecoder)
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
     private func createGradientLayer() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.bounds
-        if self.model?.isMostPopular ?? false {
-            gradientLayer.colors = [UIColor.blue.cgColor, UIColor.black.cgColor]
-        }
-        else {
-            gradientLayer.colors = [UIColor.lightGray.cgColor, UIColor.black.cgColor]
-        }
+        let colors = self.model?.isMostPopular ?? false ?
+            [Colors.appLightBlue.cgColor, Colors.appDarkBlue.cgColor] :
+            [UIColor.white.cgColor, UIColor.lightGray.cgColor]
+        let gradientLayer = Gradient.layer(with: self.bounds, colors: colors)
         self.layer.addSublayer(gradientLayer)
-        self.addSubview(infoView)
-        self.infoView.addSubview(mostPopularLabel)
+        self.bringSubviewToFront(self.infoView)
     }
     
     private func configureUI() {
@@ -53,9 +52,11 @@ class SubscriptionView: UIView { //TODO: спросить у Димы как н�
     }
     
     private func setupMostPopularLabel() {
-        self.mostPopularLabel.isHidden = !(model?.isMostPopular ?? false)
+        self.mostPopularLabel.isHidden = !(self.model?.isMostPopular ?? false)
         self.mostPopularLabel.textColor = .white
-        self.mostPopularLabel.backgroundColor = .blue
+        self.mostPopularLabel.backgroundColor = Colors.appLightBlue
+        self.mostPopularLabel.layer.masksToBounds = true
+        self.mostPopularLabel.layer.cornerRadius = self.mostPopularLabel.bounds.height / 2
         self.mostPopularLabel.textAlignment = .center
     }
     
@@ -65,7 +66,7 @@ class SubscriptionView: UIView { //TODO: спросить у Димы как н�
         }
         self.countLabel.textAlignment = .center
         self.countLabel.attributedText = NSAttributedString(
-            string: model?.count ?? "",
+            string: self.model?.count ?? "",
             attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 30)]
         )
     }
@@ -76,7 +77,7 @@ class SubscriptionView: UIView { //TODO: спросить у Димы как н�
         }
         self.periodLabel.textAlignment = .center
         self.periodLabel.attributedText = NSAttributedString(
-            string: model?.period ?? "",
+            string: self.model?.period ?? "",
             attributes: [:]
         )
     }
@@ -86,10 +87,10 @@ class SubscriptionView: UIView { //TODO: спросить у Димы как н�
             self.priceLabel.textColor = .blue
         }
         self.priceLabel.textAlignment = .center
-        let text = (model?.price ?? "") + (model?.additionalPrice ?? "")
+        let text = (self.model?.price ?? "") + (self.model?.additionalPrice ?? "")
         let attributedString = NSMutableAttributedString(string: text)
         let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
-        let count = model?.price.count ?? 0
+        let count = self.model?.price.count ?? 0
         attributedString.addAttributes(attributes, range: NSRange(location: 0, length: count))
         self.priceLabel.attributedText = attributedString
     }

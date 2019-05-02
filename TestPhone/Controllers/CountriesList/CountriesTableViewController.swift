@@ -16,15 +16,9 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getCountries()
+        self.countries = DataService.countries()
         self.setupView()
         self.setupSearchController()
-    }
-    
-    func getCountries() {
-        let normalData = CountryData.data.data(using: .utf8)
-        let data = normalData?.convertToDictionary()
-        self.countries = try? Countries(object: data ?? [:]).countries
     }
     
     func setupSearchController() {
@@ -35,15 +29,14 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
         self.searchController.searchBar.backgroundColor = .white
         self.searchController.searchBar.tintColor = .gray
         self.searchController.searchBar.barTintColor = .gray
-        navigationItem.searchController = self.searchController
+        self.navigationItem.searchController = self.searchController
         self.searchController.searchResultsUpdater = self
-        navigationItem.hidesSearchBarWhenScrolling = false
-        definesPresentationContext = true
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.definesPresentationContext = true
         for view in self.searchController.searchBar.subviews {
             for subview in view.subviews {
                 if subview.isKind(of: UITextField.self) {
                     let textField: UITextField = subview as! UITextField
-                    textField.backgroundColor = .clear
                     textField.clipsToBounds = true
                     textField.layer.cornerRadius = 20
                 }
@@ -53,11 +46,12 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
     
     func setupView() {
         self.tableView.register(CountryTableCell.self)
-        tableView.tableFooterView = UIView()
-        navigationItem.title = "Select a country"
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
+        self.tableView.tableFooterView = UIView()
+        self.navigationItem.title = "Select a country"
+        self.navigationController?.navigationBar.barTintColor = .white
+        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
  
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,11 +71,12 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
     
 
     func configureCell(cell: CountryTableCell, forRowAtIndexPath indexPath: IndexPath) {
-        cell.country = self.searchActive ? self.filtered[indexPath.row] : self.countries?[indexPath.row]
+        cell.country = self.country(by: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = CountryDetailViewController()
+        vc.country = self.country(by: indexPath)
         self.navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -96,10 +91,16 @@ extension CountriesListTableViewController: UISearchResultsUpdating {
                     let range = text.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
                     return range.location != NSNotFound
                 })
-                self.searchActive = !(self.filtered.count == 0)
+                self.searchActive = !searchText.isEmpty
             }
-            tableView.reloadData()
+            self.tableView.reloadData()
         }
+    }
+    
+    func country(by indexPath: IndexPath) -> Country? {
+        guard let collection = self.searchActive ? self.filtered : self.countries else { return nil }
+        guard indexPath.row <= collection.count else { return nil }
+        return collection[indexPath.row]
     }
     
     
@@ -118,5 +119,4 @@ extension CountriesListTableViewController: UISearchResultsUpdating {
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         self.searchActive = false;
     }
-
 }

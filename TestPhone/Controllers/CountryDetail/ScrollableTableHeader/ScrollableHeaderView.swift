@@ -22,7 +22,13 @@ class ScrollableHeaderView: UITableViewHeaderFooterView {
         }
     }
     
-    var slides: [Slide] = []
+    var models: [Phone]? = [] {
+        didSet {
+            self.configureView()
+        }
+    }
+    
+    var slides: [SlideView] = []
     
     weak var delegate: ScrollableHeaderViewDelegate?
     
@@ -32,7 +38,6 @@ class ScrollableHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configureView()
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
@@ -46,14 +51,15 @@ class ScrollableHeaderView: UITableViewHeaderFooterView {
     }
     
     private func createSlides() {
-        for _ in 1...5 {
-            let slide: Slide = UINib.instantiate()
+        for model in self.models ?? [] {
+            let slide: SlideView = UINib.instantiate()
+            slide.phone = model
             self.slides.append(slide)
         }
     }
     
     private func configurePageControl() {
-        self.pageControl.numberOfPages = self.slides.count
+        self.pageControl.numberOfPages = self.models?.count ?? 0
         self.pageControl.currentPage = 0
         self.bringSubviewToFront(self.pageControl)
         self.bringSubviewToFront(self.cancelButton)

@@ -11,12 +11,20 @@ import UIKit
 class CountryDetailViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.bounds.size), style: .grouped)
+        tableView.separatorStyle = .none
         tableView.register(ScrollableHeaderView.self)
         tableView.register(SubscriptionTableViewCell.self)
+        tableView.register(TableFooterView.self)
         tableView.delegate = self
         tableView.dataSource = self
         return tableView
     }()
+    
+    var country: Country? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +35,7 @@ class CountryDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         UIView.animate(withDuration: 0.25) {
-            UIApplication.shared.statusBarColor = .blue
+            UIApplication.shared.statusBarColor = Colors.appDarkBlue
         }
     }
     
@@ -51,7 +59,7 @@ extension CountryDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SubscriptionTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
-        cell.subscriptionViews = self.createSubscriptions()
+        cell.subscriptions = self.country?.subscriptions
         return cell
     }
     
@@ -65,39 +73,48 @@ extension CountryDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view: ScrollableHeaderView = tableView.dequeueHeaderReusableCell()
+        view.models = country?.phones
         view.delegate = self
         return view
     }
-}
-
-extension CountryDetailViewController {
-    private func createSubscriptions() -> [SubscriptionView] {
-        let models = self.createModels()
-        let view1: SubscriptionView = UINib.instantiate()
-        view1.model = models[0]
-        let view2: SubscriptionView = UINib.instantiate()
-        view2.model = models[1]
-        let view3: SubscriptionView = UINib.instantiate()
-        view3.model = models[2]
-        return [view1, view2, view3]
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view: TableFooterView = tableView.dequeueHeaderReusableCell()
+        view.delegate = self
+        return view
     }
     
-    private func createModels() -> [Subscription] {
-        let model1 = Subscription(count: "3", period: "months", price: "$29.99")
-        let model2 = Subscription(
-            isMostPopular: true,
-            count: "3-Day",
-            period: "trial",
-            price: "$7.99",
-            additionalPrice: "/wk"
-        )
-        let model3 = Subscription(count: "12", period: "months", price: "$59.99")
-        return [model1, model2, model3]
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 185
     }
 }
 
 extension CountryDetailViewController: ScrollableHeaderViewDelegate {
     func cancelButtonTapped() {
         self.navigationController?.popViewController(animated: true)
+    }
+}
+
+extension CountryDetailViewController: TableFooterViewDelegate {
+    func activateButtonTapped() {
+        self.alert(text: "Activate button tapped")
+    }
+    
+    func termsButtonTapped() {
+        self.alert(text: "Terms button tapped")
+    }
+    
+    func policyButtonTapped() {
+        self.alert(text: "Privacy policy button tapped")
+    }
+    
+    func restoreButtonTapped() {
+        self.alert(text: "Restore button tapped")
+    }
+    
+    private func alert(text: String) {
+        let alert = UIAlertController(title: "Alert", message: text, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
