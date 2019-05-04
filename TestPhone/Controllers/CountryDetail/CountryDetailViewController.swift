@@ -38,11 +38,13 @@ class CountryDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0)
         self.view.backgroundColor = Colors.appDarkBlue
         self.view.addSubview(self.fakeFooterView)
         self.view.addSubview(self.tableView)
         
         let footerView: TableFooterView = UINib.instantiate()
+        footerView.delegate = self
         self.tableView.tableFooterView = footerView
         
         self.tableView.tableHeaderView = self.headerView
@@ -63,12 +65,6 @@ class CountryDetailViewController: UIViewController {
         UIView.animate(withDuration: 0.25) {
             UIApplication.shared.statusBarColor = .white
         }
-    }
-    
-    private func alert(text: String) {
-        let alert = UIAlertController(title: "Alert", message: text, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -100,19 +96,19 @@ extension CountryDetailViewController: ScrollableHeaderViewDelegate {
 
 extension CountryDetailViewController: TableFooterViewDelegate {
     func activateButtonTapped() {
-        self.alert(text: "Activate button tapped")
+        print("Activate button tapped")
     }
     
     func termsButtonTapped() {
-        self.alert(text: "Terms button tapped")
+        print("Terms button tapped")
     }
     
     func policyButtonTapped() {
-        self.alert(text: "Privacy policy button tapped")
+        print("Privacy policy button tapped")
     }
     
     func restoreButtonTapped() {
-        self.alert(text: "Restore button tapped")
+        print("Restore button tapped")
     }
 }
 
