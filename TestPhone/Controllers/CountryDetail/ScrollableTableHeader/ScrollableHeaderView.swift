@@ -12,23 +12,20 @@ protocol ScrollableHeaderViewDelegate: class {
     func cancelButtonTapped()
 }
 
-class ScrollableHeaderView: UITableViewHeaderFooterView {
+class ScrollableHeaderView: UIView {
     
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var scrollView: UIScrollView! {
-        didSet{
-            self.scrollView.delegate = self
-        }
-    }
+    @IBOutlet var collectionView: UICollectionView!
     
     var models: [Phone]? = [] {
         didSet {
-            self.configureView()
+            self.configurePageControl()
+            self.collectionView.reloadData()
         }
     }
     
-    var slides: [SlideView] = []
+    var slides: [SlideViewCell] = []
     
     weak var delegate: ScrollableHeaderViewDelegate?
     
@@ -38,49 +35,65 @@ class ScrollableHeaderView: UITableViewHeaderFooterView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        self.delegate?.cancelButtonTapped()
+        self.configureView()
     }
     
     private func configureView() {
-        self.createSlides()
-        self.setupSlideScrollView()
-        self.configurePageControl()
+        self.configureCollection()
+        self.createGradientLayer()
     }
     
-    private func createSlides() {
-        for model in self.models ?? [] {
-            let slide: SlideView = UINib.instantiate()
-            slide.phone = model
-            self.slides.append(slide)
-        }
+    private func configureCollection() {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets.zero
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        layout.itemSize = CGSize.init(width: UIScreen.main.bounds.width, height: 400)
+        self.collectionView.setCollectionViewLayout(layout, animated: false)
+        self.collectionView.backgroundColor = .clear
+        self.collectionView.dataSource = self
+        
+        self.collectionView.isPagingEnabled = true
+        self.collectionView.register(UINib(nibName: "SlideViewCell", bundle: nil), forCellWithReuseIdentifier: "SlideViewCell")
+        self.collectionView.showsHorizontalScrollIndicator = false
+        self.collectionView.showsVerticalScrollIndicator = false
+    }
+    
+    func createGradientLayer() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = [Colors.appDarkBlue.cgColor, Colors.appBlue.cgColor]
+        self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     private func configurePageControl() {
         self.pageControl.numberOfPages = self.models?.count ?? 0
         self.pageControl.currentPage = 0
-        self.bringSubviewToFront(self.pageControl)
-        self.bringSubviewToFront(self.cancelButton)
     }
     
     private func setupCancelButton() {
         self.cancelButton.tintColor = .white
     }
     
-    private func setupSlideScrollView() {
-        let width = UIScreen.main.bounds.width
-        self.scrollView.showsHorizontalScrollIndicator = false
-        self.scrollView.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
-        self.scrollView.contentSize = CGSize(width: width * CGFloat(self.slides.count), height: self.frame.height)
-        self.scrollView.isPagingEnabled = true
-        for i in 0 ..< self.slides.count {
-            self.slides[i].frame = CGRect(x: width * CGFloat(i), y: 0, width: width, height: self.frame.height)
-            self.scrollView.addSubview(self.slides[i])
-        }
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.delegate?.cancelButtonTapped()
     }
 }
+
+
+extension ScrollableHeaderView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.models?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SlideViewCell", for: indexPath) as! SlideViewCell
+        cell.phone = self.models?[indexPath.row]
+        return cell
+    }
+}
+
 
 extension ScrollableHeaderView: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

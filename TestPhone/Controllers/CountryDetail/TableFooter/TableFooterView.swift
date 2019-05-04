@@ -15,7 +15,7 @@ protocol TableFooterViewDelegate: class {
     func restoreButtonTapped()
 }
 
-class TableFooterView: UITableViewHeaderFooterView {
+class TableFooterView: UIView {
     @IBOutlet weak var activateButton: UIButton!
     @IBOutlet weak var termsButton: UIButton!
     @IBOutlet weak var privacyButton: UIButton!
@@ -31,6 +31,7 @@ class TableFooterView: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.configureView()
+        self.backgroundColor = .white
     }
     
     @IBAction func activateButtonTapped(_ sender: Any) {

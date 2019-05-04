@@ -14,7 +14,7 @@ class SubscriptionView: UIView {
     @IBOutlet weak var mostPopularLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    
+    @IBOutlet weak var placeholderView: UIView!
     var model: Subscription? {
         didSet {
             self.configureUI()
@@ -45,19 +45,26 @@ class SubscriptionView: UIView {
     
     private func configureUI() {
         self.createGradientLayer()
+        self.setupPopuplarContainer()
         self.setupMostPopularLabel()
         self.setupCountLabel()
         self.setupPeriodLabel()
         self.setupPriceLabel()
     }
     
+    private func setupPopuplarContainer() {
+        self.placeholderView.backgroundColor = Colors.appLightBlue
+        self.placeholderView.isHidden = !(self.model?.isMostPopular ?? false)
+        self.placeholderView.layer.masksToBounds = true
+        self.placeholderView.layer.cornerRadius = 8
+    }
+    
     private func setupMostPopularLabel() {
         self.mostPopularLabel.isHidden = !(self.model?.isMostPopular ?? false)
         self.mostPopularLabel.textColor = .white
-        self.mostPopularLabel.backgroundColor = Colors.appLightBlue
         self.mostPopularLabel.layer.masksToBounds = true
-        self.mostPopularLabel.layer.cornerRadius = self.mostPopularLabel.bounds.height / 2
         self.mostPopularLabel.textAlignment = .center
+        self.mostPopularLabel.font = UIFont.systemFont(ofSize: 12)
     }
     
     private func setupCountLabel() {
@@ -67,7 +74,7 @@ class SubscriptionView: UIView {
         self.countLabel.textAlignment = .center
         self.countLabel.attributedText = NSAttributedString(
             string: self.model?.count ?? "",
-            attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 30)]
+            attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 26)]
         )
     }
     
@@ -89,7 +96,7 @@ class SubscriptionView: UIView {
         self.priceLabel.textAlignment = .center
         let text = (self.model?.price ?? "") + (self.model?.additionalPrice ?? "")
         let attributedString = NSMutableAttributedString(string: text)
-        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18)]
         let count = self.model?.price.count ?? 0
         attributedString.addAttributes(attributes, range: NSRange(location: 0, length: count))
         self.priceLabel.attributedText = attributedString

@@ -75,6 +75,7 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.searchActive = false
         let vc = CountryDetailViewController()
         vc.country = self.country(by: indexPath)
         self.navigationController?.pushViewController(vc, animated: true)

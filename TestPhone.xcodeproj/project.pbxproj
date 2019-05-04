@@ -22,8 +22,8 @@
 		ACB5872422786CD300EB9002 /* UITableViewCell+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */; };
 		ACB5872622786D4C00EB9002 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872522786D4C00EB9002 /* ReusableView.swift */; };
 		ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587272278711400EB9002 /* UINib+Instantiate.swift */; };
-		ACB5872B2278776E00EB9002 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872A2278776E00EB9002 /* SlideView.swift */; };
-		ACB5872D2278778200EB9002 /* SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5872C2278778200EB9002 /* SlideView.xib */; };
+		ACB5872B2278776E00EB9002 /* SlideViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5872A2278776E00EB9002 /* SlideViewCell.swift */; };
+		ACB5872D2278778200EB9002 /* SlideViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB5872C2278778200EB9002 /* SlideViewCell.xib */; };
 		ACB587362279E5DE00EB9002 /* SubscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587322279E5DE00EB9002 /* SubscriptionTableViewCell.swift */; };
 		ACB587372279E5DE00EB9002 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587332279E5DE00EB9002 /* SubscriptionView.swift */; };
 		ACB587382279E5DE00EB9002 /* SubscriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB587342279E5DE00EB9002 /* SubscriptionView.xib */; };
@@ -91,8 +91,8 @@
 		ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+NibLoadable.swift"; sourceTree = "<group>"; };
 		ACB5872522786D4C00EB9002 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		ACB587272278711400EB9002 /* UINib+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINib+Instantiate.swift"; sourceTree = "<group>"; };
-		ACB5872A2278776E00EB9002 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
-		ACB5872C2278778200EB9002 /* SlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideView.xib; sourceTree = "<group>"; };
+		ACB5872A2278776E00EB9002 /* SlideViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewCell.swift; sourceTree = "<group>"; };
+		ACB5872C2278778200EB9002 /* SlideViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideViewCell.xib; sourceTree = "<group>"; };
 		ACB587322279E5DE00EB9002 /* SubscriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionTableViewCell.swift; sourceTree = "<group>"; };
 		ACB587332279E5DE00EB9002 /* SubscriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
 		ACB587342279E5DE00EB9002 /* SubscriptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionView.xib; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 				ACB5871E22786A6F00EB9002 /* Controllers */,
 				ACB5873A2279E5F300EB9002 /* Models */,
 				ACB5871F22786AD100EB9002 /* Categories */,
-				ACB5872022786BD100EB9002 /* Utilz */,
+				ACB5872022786BD100EB9002 /* Utils */,
 				ACB586EA227862A600EB9002 /* AppDelegate.swift */,
 				ACB586EE227862A600EB9002 /* Main.storyboard */,
 				ACB586F1227862A800EB9002 /* Assets.xcassets */,
@@ -257,7 +257,7 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		ACB5872022786BD100EB9002 /* Utilz */ = {
+		ACB5872022786BD100EB9002 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				ACB587452279FBB300EB9002 /* CountryData.swift */,
@@ -266,14 +266,14 @@
 				ACB58755227A0B6900EB9002 /* Gradient.swift */,
 				ACB58760227B25C800EB9002 /* Colors.swift */,
 			);
-			path = Utilz;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		ACB587292278775300EB9002 /* Slide */ = {
 			isa = PBXGroup;
 			children = (
-				ACB5872A2278776E00EB9002 /* SlideView.swift */,
-				ACB5872C2278778200EB9002 /* SlideView.xib */,
+				ACB5872A2278776E00EB9002 /* SlideViewCell.swift */,
+				ACB5872C2278778200EB9002 /* SlideViewCell.xib */,
 			);
 			path = Slide;
 			sourceTree = "<group>";
@@ -456,7 +456,7 @@
 				ACB587392279E5DE00EB9002 /* SubscriptionTableViewCell.xib in Resources */,
 				ACB5875A227AF6C000EB9002 /* TableFooterView.xib in Resources */,
 				ACB5874C2279FC7500EB9002 /* CountryTableCell.xib in Resources */,
-				ACB5872D2278778200EB9002 /* SlideView.xib in Resources */,
+				ACB5872D2278778200EB9002 /* SlideViewCell.xib in Resources */,
 				ACB587382279E5DE00EB9002 /* SubscriptionView.xib in Resources */,
 				ACB5871D2278691700EB9002 /* ScrollableHeaderView.xib in Resources */,
 				ACB586F5227862A800EB9002 /* LaunchScreen.storyboard in Resources */,
@@ -584,7 +584,7 @@
 				ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */,
 				ACB587422279FAD100EB9002 /* CountryTableCell.swift in Sources */,
 				ACB58759227AF6C000EB9002 /* TableFooterView.swift in Sources */,
-				ACB5872B2278776E00EB9002 /* SlideView.swift in Sources */,
+				ACB5872B2278776E00EB9002 /* SlideViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

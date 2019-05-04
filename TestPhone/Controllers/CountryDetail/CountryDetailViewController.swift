@@ -9,31 +9,47 @@
 import UIKit
 
 class CountryDetailViewController: UIViewController {
+    
+    var headerView: ScrollableHeaderView = UINib.instantiate()
+    
+    lazy var fakeFooterView: UIView = {
+        let view = UIView(frame: CGRect.zero)
+        view.backgroundColor = .white
+        return view
+    }()
+    
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.bounds.size), style: .grouped)
+        let tableView = UITableView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.bounds.size), style: .plain)
         tableView.separatorStyle = .none
-        tableView.register(ScrollableHeaderView.self)
         tableView.register(SubscriptionTableViewCell.self)
-        tableView.register(TableFooterView.self)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
     var country: Country? {
         didSet {
+            self.headerView.models = country?.phones
             self.tableView.reloadData()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = Colors.appDarkBlue
+        self.view.addSubview(self.fakeFooterView)
         self.view.addSubview(self.tableView)
+        
+        let footerView: TableFooterView = UINib.instantiate()
+        self.tableView.tableFooterView = footerView
+        
+        self.tableView.tableHeaderView = self.headerView
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         UIView.animate(withDuration: 0.25) {
             UIApplication.shared.statusBarColor = Colors.appDarkBlue
         }
@@ -41,10 +57,16 @@ class CountryDetailViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         UIView.animate(withDuration: 0.25) {
             UIApplication.shared.statusBarColor = .white
         }
+    }
+    
+    private func alert(text: String) {
+        let alert = UIAlertController(title: "Alert", message: text, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -64,28 +86,11 @@ extension CountryDetailViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180
+        return 170
     }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 400
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view: ScrollableHeaderView = tableView.dequeueHeaderReusableCell()
-        view.models = country?.phones
-        view.delegate = self
-        return view
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view: TableFooterView = tableView.dequeueHeaderReusableCell()
-        view.delegate = self
-        return view
-    }
-    
+
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 185
+        return 0.0001
     }
 }
 
@@ -111,10 +116,14 @@ extension CountryDetailViewController: TableFooterViewDelegate {
     func restoreButtonTapped() {
         self.alert(text: "Restore button tapped")
     }
-    
-    private func alert(text: String) {
-        let alert = UIAlertController(title: "Alert", message: text, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+}
+
+extension CountryDetailViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = CGFloat(self.tableView.contentSize.height) - CGFloat(UIScreen.main.bounds.height)
+        print("%@", scrollView.contentOffset.y)
+        if (scrollView.contentOffset.y > offset) {
+            
+        }
     }
 }
