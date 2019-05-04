@@ -33,7 +33,7 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
         self.navigationItem.searchController = self.searchController
         self.searchController.searchResultsUpdater = self
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        self.definesPresentationContext = true
+        self.definesPresentationContext = false
         for view in self.searchController.searchBar.subviews {
             for subview in view.subviews {
                 if subview.isKind(of: UITextField.self) {
