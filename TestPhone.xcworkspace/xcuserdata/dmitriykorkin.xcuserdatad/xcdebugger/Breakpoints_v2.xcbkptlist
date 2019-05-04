@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/CountryDetailViewController.swift"
-            timestampString = "578653421.487028"
+            timestampString = "578654634.981953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "numberOfSections(in:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountriesList/CountriesTableViewController.swift"
-            timestampString = "578651752.873027"
+            timestampString = "578654634.982089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "setupSearchController()"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/CountryDetailViewController.swift"
-            timestampString = "578653421.487642"
+            timestampString = "578654634.9822249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountriesList/CountriesTableViewController.swift"
-            timestampString = "578651752.8734519"
+            timestampString = "578654634.982306"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "searchBarCancelButtonClicked(searchBar:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/ScrollableTableHeader/Slide/SlideViewCell.swift"
-            timestampString = "578651752.873822"
+            timestampString = "578654634.982687"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/ScrollableTableHeader/Slide/SlideViewCell.swift"
-            timestampString = "578651752.873891"
+            timestampString = "578654634.9827631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/ScrollableTableHeader/Slide/SlideViewCell.swift"
-            timestampString = "578651752.873951"
+            timestampString = "578654634.982825"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/ScrollableTableHeader/Slide/SlideViewCell.swift"
-            timestampString = "578651752.87401"
+            timestampString = "578654634.982886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -266,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/ScrollableTableHeader/Slide/SlideViewCell.swift"
-            timestampString = "578651752.874078"
+            timestampString = "578654634.983016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/ScrollableTableHeader/ScrollableHeaderView.swift"
-            timestampString = "578654163.7021821"
+            timestampString = "578654634.983102"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/ScrollableTableHeader/ScrollableHeaderView.swift"
-            timestampString = "578654163.7026139"
+            timestampString = "578654634.983592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -314,44 +314,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestPhone/Controllers/CountryDetail/CountryDetailViewController.swift"
-            timestampString = "578653421.4885499"
+            timestampString = "578654634.983974"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestPhone/Controllers/CountryDetail/CountryDetailViewController.swift"
-            timestampString = "578653421.489063"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "restoreButtonTapped()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestPhone/Controllers/CountryDetail/CountryDetailViewController.swift"
-            timestampString = "578653421.489449"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "restoreButtonTapped()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

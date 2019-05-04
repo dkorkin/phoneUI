@@ -29,6 +29,7 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
         self.searchController.searchBar.backgroundColor = .white
         self.searchController.searchBar.tintColor = .gray
         self.searchController.searchBar.barTintColor = .gray
+        self.searchController.hidesNavigationBarDuringPresentation = false
         self.navigationItem.searchController = self.searchController
         self.searchController.searchResultsUpdater = self
         self.navigationItem.hidesSearchBarWhenScrolling = false
