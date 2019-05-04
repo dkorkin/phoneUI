@@ -121,9 +121,9 @@ extension CountryDetailViewController: TableFooterViewDelegate {
 extension CountryDetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = CGFloat(self.tableView.contentSize.height) - CGFloat(UIScreen.main.bounds.height)
-        print("%@", scrollView.contentOffset.y)
         if (scrollView.contentOffset.y > offset) {
-            
+            let height = scrollView.contentOffset.y - offset
+            self.fakeFooterView.frame = CGRect.init(x: 0, y: UIScreen.main.bounds.height - height, width: UIScreen.main.bounds.width, height: height)
         }
     }
 }
