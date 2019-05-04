@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		432AA4EDBB04137A5054CEA2 /* Pods_TestPhoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B32D1E4408F317BF3C61308 /* Pods_TestPhoneUITests.framework */; };
 		4DC254A152C8940744C47F6C /* Pods_TestPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE52EB0790C83BC8436A1C0C /* Pods_TestPhone.framework */; };
+		ACA1276A227D90B20032AC03 /* SearchDisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA12769227D90B10032AC03 /* SearchDisplayController.swift */; };
 		ACB586EB227862A600EB9002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586EA227862A600EB9002 /* AppDelegate.swift */; };
 		ACB586ED227862A600EB9002 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */; };
 		ACB586F0227862A600EB9002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB586EE227862A600EB9002 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		6861BDCB1C7CF2696729CB9E /* Pods-TestPhoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhoneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhoneUITests/Pods-TestPhoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		68E2E00126BAEBC52D0AB866 /* Pods-TestPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhone/Pods-TestPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		9530F6785FF248564530CDCF /* Pods-TestPhoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhoneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhoneUITests/Pods-TestPhoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACA12769227D90B10032AC03 /* SearchDisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDisplayController.swift; sourceTree = "<group>"; };
 		ACB586E7227862A600EB9002 /* TestPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB586EA227862A600EB9002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ACA12768227D90990032AC03 /* SearchDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				ACA12769227D90B10032AC03 /* SearchDisplayController.swift */,
+			);
+			path = SearchDisplay;
+			sourceTree = "<group>";
+		};
 		ACB586DE227862A600EB9002 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +249,7 @@
 		ACB5871E22786A6F00EB9002 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ACA12768227D90990032AC03 /* SearchDisplay */,
 				ACB5873D2279F8C800EB9002 /* CountriesList */,
 				ACB587182278662200EB9002 /* CountryDetail */,
 			);
@@ -580,6 +591,7 @@
 				ACB587482279FC2700EB9002 /* Data+Dictionary.swift in Sources */,
 				ACB58756227A0B6900EB9002 /* Gradient.swift in Sources */,
 				ACB5872422786CD300EB9002 /* UITableViewCell+NibLoadable.swift in Sources */,
+				ACA1276A227D90B20032AC03 /* SearchDisplayController.swift in Sources */,
 				ACB5875D227B125E00EB9002 /* DataService.swift in Sources */,
 				ACB587282278711400EB9002 /* UINib+Instantiate.swift in Sources */,
 				ACB587422279FAD100EB9002 /* CountryTableCell.swift in Sources */,

@@ -45,6 +45,7 @@ class CountryDetailViewController: UIViewController {
         self.tableView.tableFooterView = footerView
         
         self.tableView.tableHeaderView = self.headerView
+        self.headerView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,10 +88,6 @@ extension CountryDetailViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
-    }
-
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.0001
     }
 }
 

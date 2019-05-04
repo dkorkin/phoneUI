@@ -62,7 +62,7 @@ class ScrollableHeaderView: UIView {
     
     func createGradientLayer() {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.bounds
+        gradientLayer.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: self.bounds.height)
         gradientLayer.colors = [Colors.appDarkBlue.cgColor, Colors.appBlue.cgColor]
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
