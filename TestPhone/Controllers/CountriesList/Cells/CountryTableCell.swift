@@ -20,8 +20,8 @@ class CountryTableCell: UITableViewCell {
         didSet {
             self.countryLabel.text = self.country?.countryName
             self.countryImage.image = UIImage(named: self.country?.countryFlag ?? "")
-            self.callsLabel.text = "CALLS"
-            self.smsLabel.text = "SMS"
+            self.callsLabel.text = String.localized("CALLS")
+            self.smsLabel.text = String.localized("SMS")
             self.smsLabel.isHidden = !(self.country?.isSmsAvailable ?? false)
         }
     }

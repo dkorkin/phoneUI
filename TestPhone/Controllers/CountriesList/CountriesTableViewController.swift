@@ -24,7 +24,7 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
     func setupSearchController() {
         self.searchController.searchResultsUpdater = self
         self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.searchBar.placeholder = "Search countries..."
+        self.searchController.searchBar.placeholder = String.localized("SEARCH_COUNTRIES")
         self.searchController.searchBar.delegate = self
         self.searchController.searchBar.backgroundColor = .white
         self.searchController.searchBar.tintColor = .gray
@@ -48,7 +48,7 @@ class CountriesListTableViewController: UITableViewController, UISearchBarDelega
     func setupView() {
         self.tableView.register(CountryTableCell.self)
         self.tableView.tableFooterView = UIView()
-        self.navigationItem.title = "Select a country"
+        self.navigationItem.title = String.localized("SELECT_COUNTRY")
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)

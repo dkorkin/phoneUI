@@ -55,6 +55,6 @@ class TableFooterView: UIView {
         self.activateButton.layer.addSublayer(gradient)
         self.activateButton.layer.masksToBounds = true
         self.activateButton.layer.cornerRadius = self.activateButton.bounds.height / 2
-        self.informationLabel.text = "Information about the subscription:\nPayment will be changed."
+        self.informationLabel.text = String.localized("SUBSCRIPTION_INFO")
     }
 }

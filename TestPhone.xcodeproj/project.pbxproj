@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		432AA4EDBB04137A5054CEA2 /* Pods_TestPhoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B32D1E4408F317BF3C61308 /* Pods_TestPhoneUITests.framework */; };
 		4DC254A152C8940744C47F6C /* Pods_TestPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE52EB0790C83BC8436A1C0C /* Pods_TestPhone.framework */; };
+		ACA1276C227D95380032AC03 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACA1276B227D95380032AC03 /* Localizable.strings */; };
+		ACA1276E227D95A40032AC03 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA1276D227D95A40032AC03 /* String+Localizable.swift */; };
 		ACB586EB227862A600EB9002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586EA227862A600EB9002 /* AppDelegate.swift */; };
 		ACB586ED227862A600EB9002 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */; };
 		ACB586F0227862A600EB9002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB586EE227862A600EB9002 /* Main.storyboard */; };
@@ -72,6 +74,8 @@
 		6861BDCB1C7CF2696729CB9E /* Pods-TestPhoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhoneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhoneUITests/Pods-TestPhoneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		68E2E00126BAEBC52D0AB866 /* Pods-TestPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhone/Pods-TestPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		9530F6785FF248564530CDCF /* Pods-TestPhoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPhoneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPhoneUITests/Pods-TestPhoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACA1276B227D95380032AC03 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		ACA1276D227D95A40032AC03 /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		ACB586E7227862A600EB9002 /* TestPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB586EA227862A600EB9002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB586EC227862A600EB9002 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				ACB5871F22786AD100EB9002 /* Categories */,
 				ACB5872022786BD100EB9002 /* Utils */,
 				ACB586EA227862A600EB9002 /* AppDelegate.swift */,
+				ACA1276B227D95380032AC03 /* Localizable.strings */,
 				ACB586EE227862A600EB9002 /* Main.storyboard */,
 				ACB586F1227862A800EB9002 /* Assets.xcassets */,
 				ACB586F3227862A800EB9002 /* LaunchScreen.storyboard */,
@@ -251,6 +256,7 @@
 				ACB587472279FC2600EB9002 /* Data+Dictionary.swift */,
 				ACB5872322786CD300EB9002 /* UITableViewCell+NibLoadable.swift */,
 				ACB587272278711400EB9002 /* UINib+Instantiate.swift */,
+				ACA1276D227D95A40032AC03 /* String+Localizable.swift */,
 				ACB5874D227A05C800EB9002 /* UIApplication+StatusBarColor.swift */,
 				ACB58762227B483B00EB9002 /* String+Width.swift */,
 			);
@@ -458,6 +464,7 @@
 				ACB5874C2279FC7500EB9002 /* CountryTableCell.xib in Resources */,
 				ACB5872D2278778200EB9002 /* SlideViewCell.xib in Resources */,
 				ACB587382279E5DE00EB9002 /* SubscriptionView.xib in Resources */,
+				ACA1276C227D95380032AC03 /* Localizable.strings in Resources */,
 				ACB5871D2278691700EB9002 /* ScrollableHeaderView.xib in Resources */,
 				ACB586F5227862A800EB9002 /* LaunchScreen.storyboard in Resources */,
 				ACB586F2227862A800EB9002 /* Assets.xcassets in Resources */,
@@ -572,6 +579,7 @@
 				ACB5873F2279FA7F00EB9002 /* CountriesTableViewController.swift in Sources */,
 				ACB586ED227862A600EB9002 /* CountryDetailViewController.swift in Sources */,
 				ACB5872622786D4C00EB9002 /* ReusableView.swift in Sources */,
+				ACA1276E227D95A40032AC03 /* String+Localizable.swift in Sources */,
 				ACB5875F227B147C00EB9002 /* Phone.swift in Sources */,
 				ACB586EB227862A600EB9002 /* AppDelegate.swift in Sources */,
 				ACB5873C2279E62A00EB9002 /* Subscription.swift in Sources */,
