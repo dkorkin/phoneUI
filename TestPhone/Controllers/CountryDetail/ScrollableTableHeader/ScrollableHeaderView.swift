@@ -53,7 +53,7 @@ class ScrollableHeaderView: UIView {
         self.collectionView.setCollectionViewLayout(layout, animated: false)
         self.collectionView.backgroundColor = .clear
         self.collectionView.dataSource = self
-        
+        self.collectionView.delegate = self
         self.collectionView.isPagingEnabled = true
         self.collectionView.register(UINib(nibName: "SlideViewCell", bundle: nil), forCellWithReuseIdentifier: "SlideViewCell")
         self.collectionView.showsHorizontalScrollIndicator = false
@@ -95,23 +95,9 @@ extension ScrollableHeaderView: UICollectionViewDataSource {
 }
 
 
-extension ScrollableHeaderView: UIScrollViewDelegate {
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        self.hideWithAnimation(true)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x/scrollView.frame.width)
-        self.pageControl.currentPage = Int(pageIndex)
-    }
-    
+extension ScrollableHeaderView: UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        self.hideWithAnimation(false)
-    }
-    
-    private func hideWithAnimation(_ hidden: Bool) {
-        UIView.animate(withDuration: 0.2) {
-            self.cancelButton.isHidden = hidden
-        }
+        let pageIndex = round(self.collectionView.contentOffset.x/self.collectionView.frame.width)
+        self.pageControl.currentPage = Int(pageIndex)
     }
 }

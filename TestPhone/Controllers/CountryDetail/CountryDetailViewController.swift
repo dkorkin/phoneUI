@@ -21,6 +21,7 @@ class CountryDetailViewController: UIViewController {
     lazy var tableView: UITableView = {
         let tableView = UITableView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: UIScreen.main.bounds.size), style: .plain)
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         tableView.register(SubscriptionTableViewCell.self)
         tableView.delegate = self
         tableView.dataSource = self

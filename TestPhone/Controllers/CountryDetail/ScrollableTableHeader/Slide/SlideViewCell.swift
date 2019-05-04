@@ -2,7 +2,6 @@ import UIKit
 
 class SlideViewCell: UICollectionViewCell {
     
-    
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var phoneNumberLabel: UILabel!

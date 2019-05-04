@@ -31,7 +31,6 @@
 		ACB5873C2279E62A00EB9002 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5873B2279E62A00EB9002 /* Subscription.swift */; };
 		ACB5873F2279FA7F00EB9002 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5873E2279FA7F00EB9002 /* CountriesTableViewController.swift */; };
 		ACB587422279FAD100EB9002 /* CountryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587412279FAD100EB9002 /* CountryTableCell.swift */; };
-		ACB587442279FB7B00EB9002 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587432279FB7B00EB9002 /* Country.swift */; };
 		ACB587462279FBB300EB9002 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587452279FBB300EB9002 /* CountryData.swift */; };
 		ACB587482279FC2700EB9002 /* Data+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587472279FC2600EB9002 /* Data+Dictionary.swift */; };
 		ACB5874A2279FC4600EB9002 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587492279FC4600EB9002 /* Countries.swift */; };
@@ -44,6 +43,7 @@
 		ACB5875F227B147C00EB9002 /* Phone.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5875E227B147C00EB9002 /* Phone.swift */; };
 		ACB58761227B25C800EB9002 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB58760227B25C800EB9002 /* Colors.swift */; };
 		ACB58763227B483B00EB9002 /* String+Width.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB58762227B483B00EB9002 /* String+Width.swift */; };
+		ACB5876E227D8C1900EB9002 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB587432279FB7B00EB9002 /* Country.swift */; };
 		FA67AD0F2568854162EEFC40 /* Pods_TestPhoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1334857D99927F384CBBA748 /* Pods_TestPhoneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -561,11 +561,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACB587442279FB7B00EB9002 /* Country.swift in Sources */,
 				ACB587462279FBB300EB9002 /* CountryData.swift in Sources */,
 				ACB5874E227A05C800EB9002 /* UIApplication+StatusBarColor.swift in Sources */,
 				ACB587362279E5DE00EB9002 /* SubscriptionTableViewCell.swift in Sources */,
 				ACB5872222786C2000EB9002 /* NibLoadableView.swift in Sources */,
+				ACB5876E227D8C1900EB9002 /* Country.swift in Sources */,
 				ACB5871B2278688400EB9002 /* ScrollableHeaderView.swift in Sources */,
 				ACB587372279E5DE00EB9002 /* SubscriptionView.swift in Sources */,
 				ACB58763227B483B00EB9002 /* String+Width.swift in Sources */,
